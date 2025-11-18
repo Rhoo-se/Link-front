@@ -1,0 +1,129 @@
+.info-detail-page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-header {
+  margin-bottom: 20px;
+}
+
+.back-button-large {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.info-content .section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-title.question {
+  color: #d9534f; /* 붉은 계열 */
+}
+
+.section-title.quote {
+  font-style: italic;
+  color: #555;
+  padding-left: 15px;
+  border-left: 4px solid #f0ad4e; /* 주황색 계열 */
+}
+
+.main-copy {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.problem-dialogue {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  font-style: italic;
+  color: #666;
+  line-height: 1.8;
+  border: 1px solid #eee;
+}
+
+.solution-box {
+  margin-top: 30px;
+}
+
+.solution-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+.solution-title.before {
+  color: #c9302c; /* 짙은 붉은색 */
+  border-left: 3px solid #c9302c;
+}
+
+.solution-title.after {
+  color: #28a745; /* 초록색 */
+  border-left: 3px solid #28a745;
+}
+
+.problem-list, .solution-list {
+  list-style: none;
+  padding-left: 15px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.problem-list li::before {
+  content: '❌';
+  margin-right: 10px;
+}
+
+.solution-list li::before {
+  content: '✅';
+  margin-right: 10px;
+}
+
+.divider {
+  border-top: 1px solid #eee;
+  margin: 50px 0;
+}
+
+.conclusion p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.contact {
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.contact h4 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.contact .thanks {
+  font-weight: bold;
+  margin-top: 20px;
+}

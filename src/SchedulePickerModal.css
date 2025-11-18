@@ -1,0 +1,140 @@
+/* --- 공용 변수 (모달 내에서 사용) --- */
+:root {
+  --primary-color: #007bff;
+  --primary-color-light: #e6f2ff;
+  --border-color: #dee2e6;
+  --text-color: #495057;
+  --background-color: #f8f9fa;
+}
+
+/* --- 모달 스타일 --- */
+.modal-backdrop {
+  position: fixed; inset: 0; background-color: rgba(0, 0, 0, 0.6);
+  display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 1rem;
+}
+.modal-content {
+  background-color: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%; max-width: 500px; height: 90vh; max-height: 700px;
+  display: flex; flex-direction: column; z-index: 1001; overflow: hidden;
+}
+
+/* --- TimeSlotPicker 내부 스타일 --- */
+.time-picker-header { text-align: center; margin-bottom: 20px; border-bottom: 1px solid #eee; padding: 0 25px 15px 25px; }
+.time-picker-header h3 { margin: 0 0 5px 0; font-size: 1.4em; }
+.time-picker-header .subtitle span { display: block; line-height: 1.5; color: #666; font-size: 0.9em; }
+
+.time-picker-body { flex: 1; padding: 0 25px 1rem 25px; overflow-y: auto; }
+
+.date-selection-group { background-color: #f9f9f9; border: 1px solid #e0e0e0; border-radius: 8px; padding: 15px; margin-bottom: 15px; }
+.date-input-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+
+.date-input-button {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #007bff;
+  font-size: 1em;
+  font-weight: bold;
+  color: #f0f8ff;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-right: 10px;
+}
+
+.date-input-button:hover {
+  border-color: #007bff;
+  background-color: #f0f8ff;
+}
+
+.date-input-button::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.date-input-button::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.button-danger {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px;
+  white-space: nowrap;
+}
+
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 0.5rem;
+}
+
+.time-slot-button {
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.time-slot-button.selected {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+  font-weight: 500;
+}
+
+.add-date-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px dashed var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.add-date-button:hover {
+  background-color: #f1f3f5;
+  border-color: #ced4da;
+}
+
+.picker-footer {
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.button-secondary {
+  background-color: #fff;
+  color: #343a40;
+  border: 1px solid var(--border-color);
+}
+.button-secondary:hover {
+  background-color: #f8f9fa; 
+}
+
+/* 버튼 공통 스타일 (모달 내에서 사용) */
+.button {
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: #0069d9;
+}

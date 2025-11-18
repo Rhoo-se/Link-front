@@ -1,0 +1,136 @@
+/* --- HomePage 전체 레이아웃 --- */
+.home-page.container {
+  padding: 0;
+  background-color: #f8f9fa;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* --- 1. 히어로 섹션 (내부 간격 최종 조절) --- */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  
+  /* [핵심 수정 1] 내부 여백, 특히 위쪽(padding-top)을 대폭 줄여 공간을 압축합니다. */
+  padding: 0.5rem 1.5rem 1.5rem; 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  background-color: #007bff;
+}
+
+/* [핵심 수정 2] 로고의 아래쪽 여백(margin)을 최소화합니다. */
+.hero-logo {
+  width: 200px;
+  margin-bottom: 0.5rem; /* 값을 대폭 줄여 제목과 가깝게 만듭니다. */
+}
+
+/* [핵심 수정 3] 제목의 위아래 여백(margin)을 모두 최소화합니다. */
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0; /* 위쪽 여백 0, 아래쪽 여백 1rem으로 설정 */
+}
+
+/* --- (이하 코드는 기존과 동일) --- */
+
+.hero-brand-film-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  /* 흰 배경에서 테두리가 보이도록 연한 회색으로 변경했습니다. */
+  border: 1px solid #cccccc;
+  border-radius: 50px;
+  /* 요청대로 배경색을 흰색으로 고정합니다. */
+  background-color: white;
+  /* 요청대로 글자색을 검은색으로 고정합니다. */
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  /* 호버 효과와 투명 효과에 관련된 속성들을 제거했습니다. */
+  white-space: nowrap;
+  width: auto;
+}
+
+
+
+
+/* --- 2. 서비스 선택 섹션 --- */
+.selection-wrapper {
+  background-color: #f8f9fa;
+  padding: 2.5rem 1.5rem;
+  margin-top: -20px; /* 이 값은 그대로 유지하거나 -35px 등으로 미세 조정할 수 있습니다. */
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ... 이하 .selection-wrapper 관련 스타일은 기존과 동일 ... */
+.selection-guide {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.choice-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.choice-card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.choice-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 123, 255, 0.3);
+  background-color: #007bff;
+  color: white;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 0.5rem 0;
+  transition: color 0.3s ease;
+}   
+
+.card-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.choice-card:hover .card-title,
+.choice-card:hover .card-description,
+.choice-card:hover .card-icon {
+  color: white;
+}

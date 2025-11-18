@@ -1,0 +1,108 @@
+/* InfoPlatformPage.css와 공통 스타일을 공유할 수 있습니다. */
+.info-detail-page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-header {
+  margin-bottom: 20px;
+}
+
+.back-button-large {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.info-content .section {
+  margin-bottom: 40px;
+}
+.info-content .section.text-center {
+  text-align: center;
+}
+
+.section-title.question {
+  color: #d9534f;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.team-logo {
+  max-width: 150px;
+  margin: 20px auto 30px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.highlight-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: center;
+  margin: 25px 0;
+}
+.highlight-text.goal {
+  font-weight: 500;
+  color: #007bff;
+}
+.highlight-text.final-word {
+    font-size: 1.2rem;
+}
+
+.representative-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.rep-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.rep-greeting {
+  line-height: 1.8;
+  font-size: 1.05em;
+  color: #333;
+}
+
+.divider {
+  border-top: 1px solid #eee;
+  margin: 50px 0;
+}
+
+.contact {
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.contact h4 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.contact .thanks {
+  font-weight: bold;
+  margin-top: 20px;
+}

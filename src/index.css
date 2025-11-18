@@ -1,0 +1,221 @@
+/* ==========================================================================
+   1. 전역 & 기본 스타일 (Global & Base Styles)
+   ========================================================================== */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  /* [추가] 앱의 기본 배경색을 지정합니다. */
+  background-color: #f8f9fa;
+}
+
+.container {
+  position: relative; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. 레이아웃 & 공용 컴포넌트 (Layout & Common Components)
+   ========================================================================== */
+
+/* --- 공통 상단 헤더 --- */
+.global-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.header-logo {
+  max-width: 120px;
+  height: auto;
+  display: inline-block;
+}
+
+/* --- 공용 '다음' 버튼 --- */
+.next-button {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  max-width: 600px;
+}
+
+.next-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.next-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.3);
+}
+
+
+/* ==========================================================================
+   3. 페이지별 스타일 (Page-specific Styles)
+   ========================================================================== */
+
+/* --- 3.1. 카드 디자인 적용 페이지 공통 스타일 --- */
+.lesson-home-page,
+.list-page,
+.detail-page,
+.booking-page,
+.confirmation-page,
+.success-page {
+  /* [수정] 배경색은 body에서 지정하므로 여기서는 제거합니다. */
+  width: 100%;
+  padding: 1.5rem 1rem;
+  justify-content: flex-start;
+}
+
+
+
+/* --- LessonHomePage (레슨 지역 선택 페이지) 전용 스타일 --- */
+.lesson-home-page.container {
+  background-color: #f8f9fa;
+  justify-content: flex-start;
+  padding-top: 10rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.lesson-home-page .lesson-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.lesson-home-page .home-logo {
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.lesson-home-page .selection-card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.lesson-home-page .lesson-card-header {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.lesson-home-page .lesson-card-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.lesson-home-page .lesson-card-header p {
+  margin: 0;
+  color: #666;
+}
+
+.lesson-home-page .selection-box label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.lesson-home-page .selection-box select {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #EAEAEA;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"><path d="M7 10l5 5 5-5H7z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.5em;
+}
+
+.lesson-home-page .next-button {
+  position: static;
+  margin-top: 1.5rem;
+}
+
+/* ... 중간 스타일 생략 ... */
+
+
+/* --- 3.8. SuccessPage (예약 완료) --- */
+.success-page .success-info-box .success-title { font-size: 1.3rem; font-weight: bold; margin: 0 0 1rem 0; color: #007bff; }
+.success-page .success-info-box .reservation-details { font-size: 1.1rem; }
+.success-page .success-info-box .reservation-details p { margin: 0.25rem 0; }
+.success-page .success-message-card { text-align: center; line-height: 1.8; font-size: 1rem; color: #333; }
+
+
+/* ==========================================================================
+   4. 관리자 페이지 & 로그인 (Admin & Login)
+   ========================================================================== */
+
+/* ... 관리자 및 로그인 페이지 스타일 생략 ... */
+.login-container { justify-content: center; padding: 2rem; }
+.login-form { width: 100%; max-width: 400px; padding: 2rem; border: 1px solid #eee; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); background-color: #fff; }
+.login-form h2 { text-align: center; margin-top: 0; margin-bottom: 1.5rem; }
+.login-form .next-button { margin-top: 1rem; }
+
+.all-reservation-container {
+  flex: 2;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.all-reservation-table-container {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.all-reservation-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.all-reservation-container th, 
+.all-reservation-container td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.all-reservation-container th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+

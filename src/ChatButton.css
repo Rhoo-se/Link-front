@@ -1,0 +1,47 @@
+/* --- 모든 페이지에 표시될 플로팅 채팅 버튼 스타일 --- */
+
+.floating-chat-button {
+  /* [핵심] 화면 스크롤과 상관없이 항상 고정된 위치에 있도록 설정합니다. */
+  position: fixed;
+  bottom: 25px; /* 화면 아래쪽에서 25px 떨어진 위치 */
+  right: 25px;  /* 화면 오른쪽에서 25px 떨어진 위치 */
+
+  /* [수정] 텍스트를 넣기 위해 크기를 살짝 키웁니다. */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* 너비/높이의 50%로 설정하여 완벽한 원을 만듭니다. */
+
+  /* 버튼 색상 */
+  background-color: #007bff;
+  color: white;
+
+  /* 아이콘/텍스트를 원의 정중앙에 위치시킵니다. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* [핵심] flex의 정렬 방향을 '세로'로 설정하여, 두 개의 <span>을 수직으로 쌓습니다. */
+  flex-direction: column;
+
+  /* [수정] 텍스트 스타일을 추가합니다. */
+  text-align: center; 
+  font-size: 20px; /* 폰트 크기를 살짝 줄여 두 줄이 잘 보이게 합니다. */
+  font-weight: bold;
+  line-height: 1.3;  /* 줄 간격을 조절합니다. */
+  
+  text-decoration: none; /* 링크의 기본 밑줄을 제거합니다. */
+
+  /* 입체감을 주기 위한 그림자 효과 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* 다른 요소들 위에 항상 보이도록 z-index 값을 높게 설정합니다. */
+  z-index: 9999;
+
+  /* 부드러운 전환 효과 */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* 마우스를 올렸을 때 버튼이 살짝 커지는 효과를 줍니다. */
+.floating-chat-button:hover {
+  transform: scale(1.1);
+}

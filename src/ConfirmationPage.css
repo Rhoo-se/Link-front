@@ -1,0 +1,164 @@
+/* --- ConfirmationPage.css (신규 독립 파일) --- */
+
+/* --- 페이지 내 공통 카드 스타일 --- */
+.confirmation-page .info-card,
+.confirmation-page .timeline-card,
+.confirmation-page .notice-card,
+.confirmation-page .account-card {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  box-sizing: border-box;
+}
+
+.confirmation-page .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* --- 1. 예약 내역 카드 --- */
+.confirmation-page .info-card {
+  cursor: default;
+}
+
+.confirmation-page .pro-info {
+  display: flex;
+  align-items: center;
+}
+
+.confirmation-page .profile-pic.small {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.confirmation-page .pro-details {
+  flex-grow: 1;
+}
+
+.confirmation-page .pro-details > p {
+  margin: 0.3rem 0;
+}
+
+.confirmation-page .golf-course {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.confirmation-page .pro-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.confirmation-page .package-info,
+.confirmation-page .reserved-time {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.confirmation-page .price {
+  font-size: 1.5rem;
+  color: #007bff;
+  font-weight: bold;
+  margin-top: 0.75rem;
+}
+
+/* [⭐ 핵심] 호버 효과가 적용되지 않도록 명시적으로 초기화 */
+.confirmation-page .info-card:hover {
+  transform: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  background-color: white;
+  color: inherit;
+}
+
+/* --- 2. 레슨 타임라인 카드 --- */
+.confirmation-page .timeline-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.confirmation-page .timeline-graph {
+  display: flex;
+  height: 40px;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.confirmation-page .timeline-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirmation-page .timeline-segment.practice { background-color: #e9ecef; color: #495057; }
+.confirmation-page .timeline-segment.lesson { background-color: #007bff; }
+.confirmation-page .timeline-segment.feedback { background-color: #007bff; }
+
+.confirmation-page .timeline-label {
+  position: absolute;
+  top: 45px;
+  font-size: 0.8rem;
+  color: #888;
+  transform: translateX(-50%);
+}
+.confirmation-page .timeline-label:first-child { transform: translateX(0); }
+.confirmation-page .timeline-label:last-child { transform: translateX(-100%); }
+
+/* --- 3. 유의사항 카드 --- */
+.confirmation-page .notice-card ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- 4. 입금 계좌 카드 --- */
+.confirmation-page .account-card {
+  text-align: center;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+.confirmation-page .account-card p { margin: 0.5rem 0; }
+.confirmation-page .account-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+/* --- 5. 하단 버튼 --- */
+.confirmation-page .next-button {
+  width: 100%;
+  max-width: 600px;
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.confirmation-page .next-button:hover {
+  background-color: #0056b3;
+}

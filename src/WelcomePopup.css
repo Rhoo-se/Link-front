@@ -1,0 +1,93 @@
+.popup-backdrop {
+  position: fixed;
+  inset: 0; /* top, right, bottom, left를 0으로 설정하는 것과 동일 */
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  padding: 25px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.popup-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.popup-body {
+  margin-bottom: 1.5rem;
+}
+
+.popup-body p {
+  margin: 0.5rem 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.popup-body hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 1.5rem 0;
+}
+
+.popup-info {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.popup-button {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.popup-button:active {
+  transform: scale(0.98);
+}
+
+.popup-button.hide-today {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.popup-button.hide-today:hover {
+  background-color: #e0e0e0;
+}
+
+.popup-button.close {
+  background-color: #007bff;
+  color: white;
+}
+
+.popup-button.close:hover {
+  background-color: #0056b3;
+}

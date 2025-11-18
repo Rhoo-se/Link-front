@@ -1,0 +1,191 @@
+
+/* --- 1. 페이지 전체 레이아웃 --- */
+.booking-page.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+/* --- 2. 공통 카드 스타일 --- */
+.booking-page .content-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem;
+}
+
+/* --- 3. 프로필 섹션 --- */
+.booking-page .profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.booking-page .profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #f0f0f0;
+}
+.booking-page .pro-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 0.25rem 0;
+}
+.booking-page .golf-course {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* --- 4. 캘린더 섹션 (⭐ 선택자 수정) --- */
+.booking-page .calendar-section {
+  text-align: center;
+}
+.booking-page .calendar-section .month-select {
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  padding: 0.5rem;
+}
+.booking-page .calendar-section .month-select:focus {
+  outline: none;
+}
+.booking-page .calendar-section .calendar-dates-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.booking-page .calendar-section .calendar-dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+.booking-page .calendar-section .date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 55px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.booking-page .calendar-section .date-item:hover {
+  background-color: #f0f0f0;
+}
+.booking-page .calendar-section .date-item.selected {
+  background-color: #007bff;
+  color: white;
+}
+.booking-page .calendar-section .date-item .day-of-week {
+  font-size: 0.8rem;
+  color: #888;
+}
+.booking-page .calendar-section .date-item.selected .day-of-week {
+  color: rgba(255, 255, 255, 0.8);
+}
+.booking-page .calendar-section .date-item .day {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.booking-page .calendar-section .arrow {
+  font-size: 1.5rem;
+  color: #aaa;
+  cursor: pointer;
+  padding: 0.5rem;
+  user-select: none;
+}
+.booking-page .calendar-section .arrow:hover {
+  color: #333;
+}
+
+/* --- 5. 타임 슬롯 섹션 (⭐ 선택자 수정) --- */
+.booking-page .time-slots-container .period-filter-container {
+  margin-bottom: 1.5rem;
+}
+.booking-page .time-slots-container .period-filter {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+.booking-page .time-slots-container .time-period {
+  margin-bottom: 1.5rem;
+}
+.booking-page .time-slots-container .time-period:last-child {
+  margin-bottom: 0;
+}
+.booking-page .time-slots-container .period-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+.booking-page .time-slots-container .hour-group {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+.booking-page .time-slots-container .hour-label {
+  font-weight: bold;
+  color: #555;
+  width: 50px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+.booking-page .time-slots-container .slots-grid {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.booking-page .time-slots-container .time-slot {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+.booking-page .time-slots-container .time-slot.available {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+}
+.booking-page .time-slots-container .time-slot.available:hover {
+  background-color: #007bff;
+  color: white;
+}
+.booking-page .time-slots-container .time-slot.reserved {
+  background-color: #f8f9fa;
+  color: #ccc;
+  border: 1px solid #eee;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+.booking-page .time-slots-container .no-slots-message {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #888;
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}

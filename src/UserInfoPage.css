@@ -1,0 +1,58 @@
+/* --- UserInfoPage 전체 레이아웃 --- */
+.user-info-page.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* UserInfoPage의 폼 카드 스타일입니다.
+  UserInfoPage.jsx의 최상위 div에 `user-info-page` 클래스를,
+  폼 카드 div에 `user-form-card` 클래스를 적용해주세요.
+  
+  <div className="container user-info-page">
+    <div className="user-form-card">
+      ...
+    </div>
+  </div>
+
+  이렇게 하면 `info-card` 클래스를 제거하여 전역 스타일과의 충돌을 원천적으로 방지할 수 있습니다.
+*/
+.user-form-card {
+  width: 100%;
+  max-width: 550px;
+  background-color: white;
+  padding: 2rem 2.5rem;
+  border-radius: 16px; /* 다른 카드들과 통일성 있게 수정 */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* 다른 카드들과 통일성 있게 수정 */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.user-form-card .card-header {
+  margin-bottom: 2rem;
+}
+
+.user-form-card .title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.user-form-card .subtitle {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* 폼 내부의 다른 요소들에 대한 스타일을 여기에 추가할 수 있습니다. */
+/*
+.form-group { ... }
+.form-input { ... }
+.submit-button { ... }
+*/
+

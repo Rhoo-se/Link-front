@@ -1,0 +1,192 @@
+/* --- TimeSlotPicker.css --- */
+
+/* 모달 콘텐츠 최상위 div */
+.time-slot-picker-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* 모달 높이에 맞춤 */
+  max-height: 80vh; /* 화면 높이 제한 */
+}
+
+/* 헤더, 바디 등 기본 구조 스타일 */
+.time-picker-header {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.time-picker-header h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.time-picker-header .subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+.time-picker-header .subtitle span {
+  display: block;
+}
+
+.time-picker-body {
+  padding: 1.5rem;
+  flex-grow: 1; /* 남는 공간 채움 */
+  overflow-y: auto; /* 스크롤 */
+}
+
+/* 날짜 선택 그룹 스타일 */
+.date-selection-group {
+  margin-bottom: 1.5rem;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.date-input-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* [핵심 1] 날짜 입력과 요일 표시를 감싸는 wrapper 스타일 */
+.date-input-wrapper {
+  display: flex; /* 가로 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 0.5rem; /* 요소 사이 간격 (선택적) */
+  flex-shrink: 0;
+}
+
+.date-input-button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: white;
+  /* 브라우저 기본 스타일 초기화 (필요시) */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* 너비 자동 조절 방지 (필요시 고정 너비 지정) */
+  width: 150px;
+}
+
+/* [핵심 2] 요일 텍스트 스타일 */
+.date-day-label {
+  /* margin-left: 0.5rem; */ /* gap으로 대체 가능 */
+  font-size: 0.9rem;
+  color: #6c757d; /* 약간 어두운 회색 */
+  font-weight: 500;
+  white-space: nowrap; /* 요일 텍스트 줄바꿈 방지 */
+}
+
+
+.button-danger {
+  background-color: #fbe0e0;
+  color: #dc3545;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* 시간 그리드 스타일 */
+.time-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 각 버튼이 한 줄을 모두 차지 */
+  gap: 0.5rem; /* 버튼 사이의 세로 간격 */
+}
+
+/* 개별 시간 버튼 스타일 */
+.time-slot-button {
+  padding: 0.75rem 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.time-slot-button.selected {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+/* 시간 블록 버튼 스타일 */
+.time-block-button {
+  font-size: 0.9rem;
+}
+
+
+.add-date-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f0f2f5;
+  color: #555;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease;
+}
+.add-date-button:hover {
+  background-color: #e4e6eb;
+}
+
+/* 푸터(Footer) 스타일 */
+.picker-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  background-color: #ffffff;
+}
+
+.selection-counter {
+  font-size: 0.9rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* 공용 버튼 스타일 */
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.button-secondary {
+  background-color: #6c757d;
+}
+
+/* 비활성화된 버튼 스타일 */
+.button:disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+

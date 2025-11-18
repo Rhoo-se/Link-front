@@ -1,0 +1,81 @@
+/* 다른 Info 페이지들과 공통 스타일을 공유할 수 있습니다. */
+.info-detail-page {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-header {
+  margin-bottom: 20px;
+}
+
+.back-button-large {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.info-content .section {
+  margin-bottom: 30px;
+}
+.info-content .section.text-center {
+  text-align: center;
+}
+
+.section-title.question {
+  color: #d9534f;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-title.highlight {
+    color: #007bff;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.payment-method {
+    text-align: center;
+}
+
+.payment-method .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.divider {
+  border-top: 1px solid #eee;
+  margin: 40px 0;
+}
+
+.contact {
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+  line-height: 1.8;
+}
+.contact h4 {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+.contact .thanks {
+  font-weight: bold;
+  margin-top: 20px;
+}

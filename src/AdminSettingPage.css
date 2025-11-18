@@ -1,0 +1,268 @@
+/* --- 1. 전체 레이아웃 --- */
+.admin-setting-page {
+  padding: 2rem 2.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* --- 2. 페이지 헤더 --- */
+.admin-setting-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.admin-setting-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #212529;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-add, .btn-nav {
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-add {
+  color: white;
+  background-color: #0d6efd;
+}
+.btn-add:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+.btn-nav {
+  color: #212529;
+  background-color: #e9ecef;
+  border: 1px solid #dee2e6;
+}
+.btn-nav:hover {
+  background-color: #dee2e6;
+}
+
+/* --- 3. 필터 바 --- */
+.filter-bar {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #e9ecef;
+}
+
+.filter-bar label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+.filter-select {
+  padding: 12px;
+  min-width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
+}
+.filter-select:disabled {
+  background-color: #e9ecef;
+  cursor: not-allowed;
+}
+
+/* --- 4. 데이터 테이블 --- */
+.table-wrapper {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border: 1px solid #e9ecef;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.course-table th, .course-table td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #dee2e6;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.course-table thead th {
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #495057;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.course-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.course-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.course-table-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.course-table-btn.btn--edit {
+  background-color: #ffc107;
+  color: #212529;
+}
+.course-table-btn.btn--edit:hover {
+  background-color: #ffca2c;
+  transform: scale(1.05);
+}
+
+.course-table-btn.btn--delete {
+  background-color: #dc3545;
+  color: white;
+}
+.course-table-btn.btn--delete:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.no-data-cell {
+  text-align: center;
+  padding: 4rem;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* --- 5. 모달 (CourseFormModal에서 사용) --- */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  animation: slide-down 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slide-down {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  color: #212529;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  outline: none;
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.btn-cancel, .btn-submit {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-cancel {
+  background-color: #6c757d;
+  color: white;
+}
+.btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+.btn-submit {
+  background-color: #0d6efd;
+  color: white;
+}
+.btn-submit:hover {
+  background-color: #0b5ed7;
+}

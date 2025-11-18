@@ -1,0 +1,102 @@
+/* 전체 페이지 레이아웃 */
+.all-reservation-page {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* 페이지 헤더 (제목 & 뒤로가기 버튼) */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #eee;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+/* 뒤로가기 버튼 스타일 */
+.back-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #555;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #333;
+}
+
+/* 테이블을 감싸는 컨테이너 */
+.table-wrapper {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  overflow-x: auto; /* 화면이 좁을 때 가로 스크롤 생성 */
+}
+
+/* 테이블 기본 스타일 */
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse; /* 셀 사이 간격 제거 */
+}
+
+/* 테이블 헤더(th) 및 셀(td) 스타일 */
+.table-wrapper th,
+.table-wrapper td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* 내용이 길어도 줄바꿈 방지 */
+}
+
+/* 테이블 헤더(thead) 스타일 */
+.table-wrapper thead th {
+  background-color: #f8f9fa;
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* 테이블 본문(tbody) 스타일 */
+.table-wrapper tbody td {
+  font-size: 14px;
+  color: #333;
+}
+
+.table-wrapper tbody tr:hover {
+  background-color: #f1f1f1; /* 마우스를 올렸을 때 배경색 변경 */
+}
+
+/* 로딩 및 에러 메시지 스타일 */
+.all-reservation-page > p {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #777;
+}
+
+.reservation-section {
+  margin-bottom: 40px; /* 각 섹션(테이블) 아래에 여백 추가 */
+}
+
+.reservation-section h2 {
+  font-size: 22px;
+  color: #444;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
