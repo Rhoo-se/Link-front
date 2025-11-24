@@ -8,9 +8,8 @@ function WelcomePopup({ onClose, onHideToday }) {
         <h2 className="popup-title">📢 안내</h2>
         <div className="popup-body">
           <p>현재 웹페이지로 예약 운영 중입니다.</p>
-          <p>25년 1월 어플리케이션 정식 출시 예정입니다.</p>
-          <p>현재 11월 23일까지의 매칭이 마감되었습니다!</p>
-          <p>24일 이후의 매칭 신청을 부탁드립니다.</p>
+          <p>26년 1월 어플리케이션 정식 출시 예정입니다.</p>
+          <p>불편 사항은 @golflink 카카오톡 채널로 언제든지 문의 주세요!</p>
           <p>감사합니다!</p>
           <hr />
           <p className="popup-info">

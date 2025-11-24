@@ -31,7 +31,7 @@ function InfoLaunchPage() {
         <div className="section">
             <p className="main-text">
                 <strong>정식 어플리케이션은<br />
-                올해 12월 출시를 목표로 준비중이에요.</strong>
+                26년 1월 출시를 목표로 준비중이에요.</strong>
             </p>
             <br></br>
             <br></br>
