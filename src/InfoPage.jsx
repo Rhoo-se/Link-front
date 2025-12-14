@@ -4,18 +4,18 @@ import './InfoPage.css'; // CSS 파일 import
 
 // 각 주제에 아이콘과 설명을 추가하여 콘텐츠를 풍부하게 만듭니다.
 const infoTopics = [
-  // {
-  //   icon: '💡',
-  //   question: '어떤 플랫폼인가요?',
-  //   description: 'GolfLink의 비전과 목표를 소개합니다.',
-  //   path: '/info/platform',
-  // },
-  // {
-  //   icon: '🏌️‍♀️',
-  //   question: '레슨방식이\n궁금해요',
-  //   description: '골프링크만의 새로운 레슨에 대해 알아보세요.',
-  //   path: '/info/lesson',
-  // },
+  {
+    icon: '💡',
+    question: '어떤 플랫폼인가요?',
+    description: 'GolfLink의 비전과 목표를 소개합니다.',
+    path: '/info/platform',
+  },
+  {
+    icon: '🏌️‍♀️',
+    question: '레슨방식이\n궁금해요',
+    description: '골프링크만의 새로운 레슨에 대해 알아보세요.',
+    path: '/info/lesson',
+  },
   {
     icon: '🤝',
     question: '자동 매칭 방식이 궁금해요',
