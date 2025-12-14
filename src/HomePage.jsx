@@ -38,13 +38,13 @@ function HomePage() {
             <p className="card-description">간편하게, 나와 맞는 골퍼와 플레이하세요.</p>
           </div>
 
-          {/* 카드 2: 골프 레슨 (순서 변경)
+          {
           <div className="choice-card" onClick={() => navigate('/lessons')}>
             <div className="card-icon">🏌️</div>
             <h2 className="card-title">골프 레슨 예약</h2>
             <p className="card-description">필요한 날만, 합리적으로 배우세요.</p>
           </div>
-        */}
+        }
 
           <div className="choice-card choice-card--recommended" // <--- 이 클래스를 추가해주세요
             onClick={() => navigate('/info')}>
